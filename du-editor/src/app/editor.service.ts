@@ -15,4 +15,10 @@ private get ipcRenderer(): Electron.IpcRenderer {
   getContent(): Promise<string> {
     return this.ipcRenderer.invoke('getContent');
     }
-    
+
+
+    setContent(content: string) {
+      this.ipcRenderer.invoke('setContent', content);
+      }
+
+      
